@@ -23,7 +23,7 @@ kube_users_dir: "{{ kube_config_dir }}/users"
 kube_api_anonymous_auth: false
 
 ## Change this to use another Kubernetes version, e.g. a current beta release
-kube_version: v1.6.7
+kube_version: v1.7.3
 
 # Where the binaries will be downloaded.
 # Note: ensure that you've enough disk space (about 1G)
@@ -149,7 +149,7 @@ vault_deployment_type: docker
 k8s_image_pull_policy: IfNotPresent
 
 # Monitoring apps for k8s
-efk_enabled: false
+efk_enabled: True
 
 # Helm deployment
 helm_enabled: false

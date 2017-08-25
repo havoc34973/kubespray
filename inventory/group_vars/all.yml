@@ -59,7 +59,15 @@ bin_dir: /usr/local/bin
 ## If set the possible values are either 'gce', 'aws', 'azure', 'openstack', or 'vsphere'
 ## When openstack is used make sure to source in the openstack credentials
 ## like you would do when using nova-client before starting the playbook.
-#cloud_provider:
+cloud_provider: openstack
+
+openstack_auth_url: "http://192.168.70.100:5000/v3"
+openstack_username: "poc"
+openstack_password: "kubePass6"
+openstack_region: "RegionOne"
+openstack_domain_name: "Default"
+openstack_tenant_id: "9a72fc0e165446ffb66140fbe5f90f59"
+
 
 ## When azure is used, you need to also set the following variables.
 ## see docs/azure.md for details on how to get these values
@@ -75,12 +83,12 @@ bin_dir: /usr/local/bin
 #azure_route_table_name:
 
 ## When OpenStack is used, if LBaaSv2 is available you can enable it with the following variables.
-#openstack_lbaas_enabled: True
-#openstack_lbaas_subnet_id: "Neutron subnet ID (not network ID) to create LBaaS VIP"
-#openstack_lbaas_create_monitor: "yes"
-#openstack_lbaas_monitor_delay: "1m"
-#openstack_lbaas_monitor_timeout: "30s"
-#openstack_lbaas_monitor_max_retries: "3"
+openstack_lbaas_enabled: True
+openstack_lbaas_subnet_id: "a7781261-45bf-43af-a56d-7b600c40a913"
+openstack_lbaas_create_monitor: "yes"
+openstack_lbaas_monitor_delay: "1m"
+openstack_lbaas_monitor_timeout: "30s"
+openstack_lbaas_monitor_max_retries: "3"
 
 ## Set these proxy values in order to update docker daemon to use proxies
 #http_proxy: ""
